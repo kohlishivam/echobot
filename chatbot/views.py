@@ -14,9 +14,7 @@ import requests
 # Create your views here.
 
 VERIFY_TOKEN = '7thsep2016'
-PAGE_ACCESS_TOKEN = 'TiBZCuWnZBbFcOccZBmuwjDShXJH181IpoJVpcEvPT80pyQZDZD'
-
-
+PAGE_ACCESS_TOKEN = 'EAAM8v1250nEBABou4eci5uSPM0mvZAAdIqgJ04CuA2YZAvQ0krxE4O9MEfvZB7yQmeeCb2pZCTyONfrZAPMJeavwHMc0o7buV3DWuuu5Mg6edhGDgS1WpVXdRAZC37eJP5lkfUdqAKRYAGlSlJKd9sIQYdR9BgF1tZAoOpoB0MtXQZDZD'
 def post_facebook_message(fbid,message_text):
 	post_message_url = 'https://graph.facebook.com/v2.6/me/messages?access_token=%s'%PAGE_ACCESS_TOKEN
 	response_msg = json.dumps({"recipient":{"id":fbid}, "message":{"text":message_text}})
